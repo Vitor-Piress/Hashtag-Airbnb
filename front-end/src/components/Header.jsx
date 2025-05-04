@@ -1,21 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-10 py-4">
-        <div id="logo" className="flex items-center">
+    <header className="shadow-sm">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-8">
+        <Link to="/" id="logo" className="flex items-center">
           <img
             className="h-10"
             src="https://images.icon-icons.com/1826/PNG/512/4202033airairbnbbnblogosocialsocialmedia-115655_115646.png"
             alt="logo airbnb"
           />
           <p className="text-airbnb text-2xl font-bold">Airbnb</p>
-        </div>
+        </Link>
 
-        <div
+        <Link
+          to="/"
           id="middle-filter"
-          className="flex rounded-full border border-gray-300 px-4 py-2 shadow-sm"
+          className="hidden rounded-full border border-gray-300 px-4 py-2 shadow-sm lg:flex"
         >
           <p className="pl- border-r border-r-gray-300 pr-4 pl-1">
             Qualquer lugar
@@ -40,9 +42,10 @@ const Header = () => {
               />
             </svg>
           </div>
-        </div>
+        </Link>
 
-        <div
+        <Link
+          to="/login"
           id="user-component"
           className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 shadow-sm"
         >
@@ -76,10 +79,10 @@ const Header = () => {
               />
             </svg>
           </div>
-          <p className="pr-1">Vitor XYZ</p>
-        </div>
+          <p className="max-w-20 truncate pr-1 sm:max-w-32">Vitor S. Pires</p>
+        </Link>
       </div>
-    </div>
+    </header>
   );
 };
 
